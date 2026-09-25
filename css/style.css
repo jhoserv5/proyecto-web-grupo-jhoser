@@ -1,4 +1,91 @@
 
+.titulo{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.section-servicios h2{
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0b1c39; 
+    text-align: center; 
+    position: relative; 
+    padding-bottom: 12px;
+}
+
+.section-servicios h2::after{
+    content: ""; /* Necesario para renderizar el pseudo-elemento */
+    display: block;
+    width: 40px; 
+    height: 4px; 
+    background-color: #2563eb; 
+    border-radius: 2px; 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-servicios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin: 15px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    margin-bottom: 25px;
+}
+
+.cards{
+    background-color: white;
+    box-shadow: 0 10px 20px 10px rgba(0,0,0,0.053);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 35px;
+}
+
+.cards:hover{
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cards .img-card{
+    background-color: rgb(161, 174, 179);
+    border-radius: 50%;
+    padding: 45px;
+    font-size: 3.6rem;
+}
+
+.cards .desc{
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.container-equipos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin: 15px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -208,6 +295,14 @@ footer{
     color: #0b1c39; 
     text-align: center; 
     position: relative; 
+    padding-bottom: 12px; 
+}
+
+.section-equipos h2::after{
+    content: ""; /* Necesario para renderizar el pseudo-elemento */
+    display: block;
+    width: 60px; 
+
     padding-bottom: 12px;
 }
 
@@ -222,5 +317,7 @@ footer{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+
+}
 }
 
