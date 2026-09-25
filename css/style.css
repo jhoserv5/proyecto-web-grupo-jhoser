@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;   
+}
+.container-header{
+    position: sticky;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    background-color: white;
+}
+.content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-header p{
+    font-weight: 700;
+}
+.content-header .header-span{
+    color: blue;
+}
+.lista-header{
+    background-color: white;
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 70%;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.lista-header ul{
+    list-style: none;  
+    display: flex;
+    flex-direction: column;      
+    margin: 0;                
+    padding: 0;                
+    display: flex;     
+    gap: 15px;  
+}
+.lista-header a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.menu-checkbox{
+    display: none;
+}
+.menu-btn{
+    cursor: pointer;
+    display: block;
+}
+.menu-checkbox:checked ~ .lista-header{
+    display: block;
+}
+.container-hero{
+    background-color: rgb(15, 15, 40);
+    height: calc(100vh - 65px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-hero h1{
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.content-hero p{
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.content-hero a{
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.content-hero a:hover{ 
+    background-color: rgb(66, 66, 255);
+    transform: scale(1.1);
+}
+
+@media (min-width: 768px){
+.menu-btn{
+    display: none;
+}
+.lista-header{
+    display: block !important;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+}
+.lista-header ul{
+    flex-direction: row;
+    gap: 20px;
+}
+}
